@@ -15,20 +15,20 @@ fi
 oc delete -n istio-system -f ${MYDIR}/../files/istio-installation.yaml
 oc delete -n istio-system -f ${MYDIR}/../files/servicemeshmemberroll-default.yaml
 
-oc delete project labs-infra istio-system knative-eventing knative-serving
+oc delete project labs-infra istio-system knative-eventing knative-serving jenkins
 oc delete template coolstore-monolith-binary-build coolstore-monolith-pipeline-build ccn-sso72 -n openshift
 
-oc delete -f ${MYDIR}/../files/clusterserviceversion-servicemeshoperator.v1.0.2.yaml
+oc delete -f ${MYDIR}/../files/clusterserviceversion-servicemeshoperator.v1.0.3.yaml
 oc delete -f ${MYDIR}/../files/subscription-servicemeshoperator.yaml
-oc delete -f ${MYDIR}/../files/clusterserviceversion-serverless-operator.v1.2.0.yaml
+oc delete -f ${MYDIR}/../files/clusterserviceversion-serverless-operator.v1.3.0.yaml
 oc delete -f ${MYDIR}/../files/subscription-serverless-operator.yaml
-oc delete -f ${MYDIR}/../files/clusterserviceversion-knative-eventing-operator.v0.9.0.yaml
+oc delete -f ${MYDIR}/../files/clusterserviceversion-knative-eventing-operator.v0.10.0.yaml
 oc delete -f ${MYDIR}/../files/subscription-knative-eventing-operator.yaml
 oc delete -f ${MYDIR}/../files/clusterserviceversion-amqstreams.v1.3.0.yaml
 oc delete -f ${MYDIR}/../files/subscription-amq-streams.yaml
-oc delete -f ${MYDIR}/../files/clusterserviceversion-knative-kafka-operator.v0.9.0.yaml
+oc delete -f ${MYDIR}/../files/clusterserviceversion-knative-kafka-operator.v0.10.0.yaml
 oc delete -f ${MYDIR}/../files/sub3cription-knative-kafka-operator.yaml
-oc delete -f ${MYDIR}/../files/clusterserviceversion-openshift-pipelines-operator.v0.7.0.yaml
+oc delete -f ${MYDIR}/../files/clusterserviceversion-openshift-pipelines-operator.v0.8.2.yaml
 oc delete -f ${MYDIR}/../files/subscription-openshift-pipelines-operator.yaml
 
 # delete user projects

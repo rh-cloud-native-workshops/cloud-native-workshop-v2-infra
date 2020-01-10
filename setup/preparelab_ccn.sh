@@ -210,7 +210,7 @@ while [ true ] ; do
 done
 
 # Install Kafka cluster in Knative-eventing
-echo -e "Install Kafka cluster in Knative-eventing"
+echo -e "Install Kafka cluster in knative-eventing"
 cat <<EOF | oc create -f -
 apiVersion: kafka.strimzi.io/v1beta1
 kind: Kafka
