@@ -200,6 +200,14 @@ oc apply -f ${MYDIR}/../files/clusterserviceversion-knative-kafka-operator.v0.10
 oc apply -f ${MYDIR}/../files/subscription-knative-kafka-operator.yaml
 
 # Wait for Kafka CRD to be a thing
+echo -e "Waiting for knative-eventing"
+while [ true ] ; do
+  if [ "$(oc project knative-eventing)" ] ; then
+    break
+  fi
+  echo -n .
+  sleep 10
+done
 echo -e "Waiting for Kafka CRD"
 while [ true ] ; do
   if [ "$(oc explain kafka -n knative-eventing)" ] ; then
@@ -210,7 +218,7 @@ while [ true ] ; do
 done
 
 # Install Kafka cluster in Knative-eventing
-echo -e "Install Kafka cluster in knative-eventing"
+echo -e "Install Kafka cluster in knative-eventing..."
 cat <<EOF | oc create -f -
 apiVersion: kafka.strimzi.io/v1beta1
 kind: Kafka
@@ -531,6 +539,17 @@ if [ -z "${MODULE_TYPE##*m3*}" ] || [ -z "${MODULE_TYPE##*m4*}" ] ; then
     oc apply -f ${MYDIR}/../files/servicemeshmemberroll-default.yaml
   else
     echo -e "SMMR, SMCP already is created...\n"
+  fi
+fi
+
+# Recheck if Knative Serving instance already is created
+if [ -z "${MODULE_TYPE##*m4*}" ] ; then
+  oc get servicemonitor -n knative-serving
+  RESULT=$?
+  if [ $RESULT -eq 0 ]; then
+    oc apply -f ${MYDIR}/../files/knativeserving-knative-serving.yaml
+  else
+    echo -e "Knative Serving instance is created...\n"
   fi
 fi
 
