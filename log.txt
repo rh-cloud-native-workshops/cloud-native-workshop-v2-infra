@@ -1,6 +1,6 @@
 Start with CCNRD Dev Track Environment Deployment... 
 
-USERCOUNT: 5
+USERCOUNT: 3
 MODULE_TYPE: m1,m2,m3,m4
 
 clusterrole.rbac.authorization.k8s.io/cluster-admin added: "opentlc-mgr"
@@ -8,9 +8,7 @@ clusterrole.rbac.authorization.k8s.io/view added: "user0"
 .clusterrole.rbac.authorization.k8s.io/view added: "user1"
 .clusterrole.rbac.authorization.k8s.io/view added: "user2"
 .clusterrole.rbac.authorization.k8s.io/view added: "user3"
-.clusterrole.rbac.authorization.k8s.io/view added: "user4"
-.clusterrole.rbac.authorization.k8s.io/view added: "user5"
-.Now using project "labs-infra" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+.Now using project "labs-infra" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -23,7 +21,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 userquota already is deleted...
 
 limitrange "labs-infra-core-resource-limits" deleted
-Now using project "dummy-29637" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "dummy-24247" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -34,9 +32,9 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
     kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
 
 route.route.openshift.io/dummy created
-HOSTNAME_SUFFIX: apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com 
+HOSTNAME_SUFFIX: apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com 
 
-Now using project "labs-infra" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "labs-infra" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 template.template.openshift.io/coolstore-monolith-binary-build created
 template.template.openshift.io/coolstore-monolith-pipeline-build created
 template.template.openshift.io/ccn-sso72 created
@@ -54,7 +52,7 @@ Installing OpenShift Service Mesh...
 clusterserviceversion.operators.coreos.com/servicemeshoperator.v1.0.3 created
 subscription.operators.coreos.com/servicemeshoperator created
 Deploying Service Mesh Control Plane and Membber Roll...
-Now using project "istio-system" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "istio-system" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -65,9 +63,10 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
     kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
 
 limitrange "istio-system-core-resource-limits" deleted
+servicemeshmemberroll.maistra.io/default created
 Creating coolstore & bookinfo projects for each user... 
 
-Now using project "user0-inventory" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user0-inventory" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -80,7 +79,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user0-inventory:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user0-inventory:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user0"
-Now using project "user0-catalog" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user0-catalog" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -93,7 +92,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user0-catalog:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user0-catalog:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user0"
-Now using project "user0-bookinfo" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user0-bookinfo" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -107,7 +106,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user0-bookinfo:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user0"
 clusterrole.rbac.authorization.k8s.io/view added: "user0"
-Now using project "user0-cloudnativeapps" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user0-cloudnativeapps" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -121,7 +120,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user0-cloudnativeapps:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user0"
 clusterrole.rbac.authorization.k8s.io/view added: "user0"
-Now using project "user1-inventory" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user1-inventory" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -134,7 +133,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user1-inventory:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user1-inventory:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user1"
-Now using project "user1-catalog" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user1-catalog" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -147,7 +146,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user1-catalog:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user1-catalog:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user1"
-Now using project "user1-bookinfo" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user1-bookinfo" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -161,7 +160,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user1-bookinfo:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user1"
 clusterrole.rbac.authorization.k8s.io/view added: "user1"
-Now using project "user1-cloudnativeapps" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user1-cloudnativeapps" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -175,7 +174,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user1-cloudnativeapps:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user1"
 clusterrole.rbac.authorization.k8s.io/view added: "user1"
-Now using project "user2-inventory" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user2-inventory" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -188,7 +187,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user2-inventory:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user2-inventory:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user2"
-Now using project "user2-catalog" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user2-catalog" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -201,7 +200,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user2-catalog:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user2-catalog:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user2"
-Now using project "user2-bookinfo" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user2-bookinfo" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -215,7 +214,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user2-bookinfo:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user2"
 clusterrole.rbac.authorization.k8s.io/view added: "user2"
-Now using project "user2-cloudnativeapps" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user2-cloudnativeapps" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -229,7 +228,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user2-cloudnativeapps:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user2"
 clusterrole.rbac.authorization.k8s.io/view added: "user2"
-Now using project "user3-inventory" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user3-inventory" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -242,7 +241,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user3-inventory:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user3-inventory:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user3"
-Now using project "user3-catalog" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user3-catalog" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -255,7 +254,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user3-catalog:default"]
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user3-catalog:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user3"
-Now using project "user3-bookinfo" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user3-bookinfo" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -269,7 +268,7 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user3-bookinfo:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user3"
 clusterrole.rbac.authorization.k8s.io/view added: "user3"
-Now using project "user3-cloudnativeapps" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user3-cloudnativeapps" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -283,118 +282,10 @@ securitycontextconstraints.security.openshift.io/anyuid added to: ["system:servi
 securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user3-cloudnativeapps:default"]
 clusterrole.rbac.authorization.k8s.io/admin added: "user3"
 clusterrole.rbac.authorization.k8s.io/view added: "user3"
-Now using project "user4-inventory" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user4-inventory:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user4-inventory:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user4"
-Now using project "user4-catalog" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user4-catalog:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user4-catalog:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user4"
-Now using project "user4-bookinfo" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user4-bookinfo:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user4-bookinfo:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user4"
-clusterrole.rbac.authorization.k8s.io/view added: "user4"
-Now using project "user4-cloudnativeapps" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user4-cloudnativeapps:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user4-cloudnativeapps:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user4"
-clusterrole.rbac.authorization.k8s.io/view added: "user4"
-Now using project "user5-inventory" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user5-inventory:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user5-inventory:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user5"
-Now using project "user5-catalog" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user5-catalog:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user5-catalog:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user5"
-Now using project "user5-bookinfo" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user5-bookinfo:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user5-bookinfo:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user5"
-clusterrole.rbac.authorization.k8s.io/view added: "user5"
-Now using project "user5-cloudnativeapps" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-securitycontextconstraints.security.openshift.io/anyuid added to: ["system:serviceaccount:user5-cloudnativeapps:default"]
-securitycontextconstraints.security.openshift.io/privileged added to: ["system:serviceaccount:user5-cloudnativeapps:default"]
-clusterrole.rbac.authorization.k8s.io/admin added: "user5"
-clusterrole.rbac.authorization.k8s.io/view added: "user5"
 Installing OpenShift Serverless...
 clusterserviceversion.operators.coreos.com/serverless-operator.v1.3.0 created
 subscription.operators.coreos.com/serverless-operator created
-Now using project "knative-serving" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "knative-serving" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -416,16 +307,12 @@ role.rbac.authorization.k8s.io/workshop-student2 created
 role.rbac.authorization.k8s.io/workshop-student2 added: "user2"
 role.rbac.authorization.k8s.io/workshop-student3 created
 role.rbac.authorization.k8s.io/workshop-student3 added: "user3"
-role.rbac.authorization.k8s.io/workshop-student4 created
-role.rbac.authorization.k8s.io/workshop-student4 added: "user4"
-role.rbac.authorization.k8s.io/workshop-student5 created
-role.rbac.authorization.k8s.io/workshop-student5 added: "user5"
 clusterserviceversion.operators.coreos.com/amqstreams.v1.3.0 created
 subscription.operators.coreos.com/amq-streams created
 clusterserviceversion.operators.coreos.com/knative-kafka-operator.v0.10.0 created
 subscription.operators.coreos.com/knative-kafka-operator created
 Waiting for knative-eventing
-..Waiting for Kafka CRD
+....Waiting for Kafka CRD
 Install Kafka cluster in knative-eventing...
 kafka.kafka.strimzi.io/my-cluster created
 knativeeventingkafka.eventing.knative.dev/knative-eventing-kafka created
@@ -433,7 +320,7 @@ Installing Tekton pipelines
 clusterserviceversion.operators.coreos.com/openshift-pipelines-operator.v0.8.2 created
 subscription.operators.coreos.com/openshift-pipelines-operator created
 Creating new test-pipeline projects
-Now using project "user0-cloudnative-pipeline" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user0-cloudnative-pipeline" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -446,7 +333,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 limitrange "user0-cloudnativeapps-core-resource-limits" deleted
 limitrange "user0-cloudnative-pipeline-core-resource-limits" deleted
 clusterrole.rbac.authorization.k8s.io/admin added: "user0"
-Now using project "user1-cloudnative-pipeline" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user1-cloudnative-pipeline" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -458,7 +345,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 
 limitrange "user1-cloudnative-pipeline-core-resource-limits" deleted
 clusterrole.rbac.authorization.k8s.io/admin added: "user1"
-Now using project "user2-cloudnative-pipeline" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user2-cloudnative-pipeline" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -470,7 +357,7 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 
 limitrange "user2-cloudnative-pipeline-core-resource-limits" deleted
 clusterrole.rbac.authorization.k8s.io/admin added: "user2"
-Now using project "user3-cloudnative-pipeline" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "user3-cloudnative-pipeline" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -482,36 +369,10 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
 
 limitrange "user3-cloudnative-pipeline-core-resource-limits" deleted
 clusterrole.rbac.authorization.k8s.io/admin added: "user3"
-Now using project "user4-cloudnative-pipeline" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-limitrange "user4-cloudnative-pipeline-core-resource-limits" deleted
-clusterrole.rbac.authorization.k8s.io/admin added: "user4"
-Now using project "user5-cloudnative-pipeline" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app django-psql-example
-
-to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
-
-limitrange "user5-cloudnative-pipeline-core-resource-limits" deleted
-clusterrole.rbac.authorization.k8s.io/admin added: "user5"
 clusterrole.rbac.authorization.k8s.io/view added: "user0"
 clusterrole.rbac.authorization.k8s.io/view added: "user1"
 clusterrole.rbac.authorization.k8s.io/view added: "user2"
 clusterrole.rbac.authorization.k8s.io/view added: "user3"
-clusterrole.rbac.authorization.k8s.io/view added: "user4"
-clusterrole.rbac.authorization.k8s.io/view added: "user5"
 --> Found container image 82cc938 (11 months old) from quay.io for "quay.io/osevg/workshopper"
 
     * An image stream tag will be created as "guides-m1:latest" that will track this image
@@ -578,7 +439,7 @@ route.route.openshift.io/guides-m3 exposed
 route.route.openshift.io/guides-m4 exposed
 template.template.openshift.io/jenkins-ephemeral replaced
 Creating Jenkins project...
-Now using project "jenkins" on server "https://api.cluster-ccn42-a570.ccn42-a570.example.opentlc.com:6443".
+Now using project "jenkins" on server "https://api.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -616,12 +477,12 @@ to build a new example application in Python. Or use kubectl to deploy a simple 
     service "jenkins-jnlp" created
     service "jenkins" created
 --> Success
-    Access your application via route 'jenkins-jenkins.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com' 
+    Access your application via route 'jenkins-jenkins.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com' 
     Run 'oc status' to view your app.
 deploymentconfig.apps.openshift.io/jenkins resource requirements updated
 Waiting for rhamt to be running... 
 
-........Getting access token to update RH-SSO theme 
+....Getting access token to update RH-SSO theme 
 
 Updating a master realm with RH-SSO theme 
 
@@ -637,17 +498,13 @@ Created RH-SSO user2 successfully...
 
 Created RH-SSO user3 successfully...
 
-Created RH-SSO user4 successfully...
-
-Created RH-SSO user5 successfully...
-
 Retrieving RH-SSO user's ID list 
 
-USER_ID_LIST: [{"id":"65f9f004-a259-4f30-85b6-3b5a7ac538a0","createdTimestamp":1578811190681,"username":"rhamt","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":["password"],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"703cc91b-9345-4293-9a6f-afb6a2140db1","createdTimestamp":1578811220324,"username":"user0","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"705ed230-006f-4a61-a875-902c190cb05f","createdTimestamp":1578811220496,"username":"user1","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"6d426850-b033-4bae-9480-8526df6dbe0e","createdTimestamp":1578811220645,"username":"user2","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"bc2fec87-a18a-42f9-9bcb-b9737e6dc4d4","createdTimestamp":1578811220785,"username":"user3","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"174911bb-a017-417b-b259-a8aa5b0cbe6f","createdTimestamp":1578811220925,"username":"user4","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"31071e94-5b3f-4989-85a0-5b7333ad33c2","createdTimestamp":1578811221072,"username":"user5","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}}] 
+USER_ID_LIST: [{"id":"b202f502-3acd-4520-a7af-33ac33287d3d","createdTimestamp":1579592914927,"username":"rhamt","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":["password"],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"96b86c37-f6bc-40dd-9354-9d5e25cf3e37","createdTimestamp":1579592930523,"username":"user0","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"4a51d08e-41e1-4f15-b246-c2b1f13faee3","createdTimestamp":1579592930732,"username":"user1","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"981bc3e5-1ee7-404f-9136-7ccb89eb2280","createdTimestamp":1579592930895,"username":"user2","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}},{"id":"5c16424c-90e5-476f-b234-43ea45d282a6","createdTimestamp":1579592931047,"username":"user3","enabled":true,"totp":false,"emailVerified":false,"disableableCredentialTypes":[],"requiredActions":[],"notBefore":0,"access":{"manageGroupMembership":true,"view":true,"mapRoles":true,"impersonate":true,"manage":true}}] 
 
 Getting access token to reset passwords 
 
-RESULT_TOKEN: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJROTBEM2ZuVkdpa21yQVJMY0RqLUw5ZVZXSlZ2NDQzUThGMDBza3FBM1JzIn0.eyJqdGkiOiJhZDA3M2IzZi1jZTM0LTQyMWQtOWYwNC0wMjIzY2U5MTJkOGQiLCJleHAiOjE1Nzg4MTcyMjEsIm5iZiI6MCwiaWF0IjoxNTc4ODExMjIxLCJpc3MiOiJodHRwczovL3NlY3VyZS1yaGFtdC13ZWItY29uc29sZS1sYWJzLWluZnJhLmFwcHMuY2x1c3Rlci1jY240Mi1hNTcwLmNjbjQyLWE1NzAuZXhhbXBsZS5vcGVudGxjLmNvbS9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI1ZjFiNWNjMy1jNzMxLTQ0MTEtYTM5MS1lODg2M2QzMzEwNmIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI1NmRiYWQwNS0wM2NjLTQyM2MtOTY3ZC1jMWRkZmJiYmUwNDkiLCJhY3IiOiIxIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.LHOoCvzHLZLKCyquk9SaJqrsitPFOgPZcas6PyD69EmkttB8vimbsucs5xW88a0GAMyulFGhPT7Flo1agdpHz8U5Pmb4WUAHYyw1vxWw6jrO2VluWXbJ1i0syhPl1aB5MYW8YIkVtS7bTitPzkpiQDrLPi8paWYfSDQvQ8CPU2UT7i6_KG0ZoFqjg469hdbP-AVM3R-ISgzwDwLCBgPIV9CUJzBiIdUseaH1r3cQ4dov1ndqJFQlegWT8eXbBH7Ue53aV-ttWmMPZh3n9WUUCF5AQCEzSJ-3N_r2pVJF2-kEtlGukwZeebh3DfvjBgSsqlS135q6QE49cGeHUfDTJw 
+RESULT_TOKEN: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMN2FXT0lHWkxDdHZPb3JMRW5kRHZlRUc4emlpM0gwZzZEanBWM3BqdHJRIn0.eyJqdGkiOiI3YzhlM2MxYS0yMWU1LTQxNDctYTQ1OC0zNjdmNzMyM2NhMWQiLCJleHAiOjE1Nzk1OTg5MzEsIm5iZiI6MCwiaWF0IjoxNTc5NTkyOTMxLCJpc3MiOiJodHRwczovL3NlY3VyZS1yaGFtdC13ZWItY29uc29sZS1sYWJzLWluZnJhLmFwcHMuY2x1c3Rlci1jY252NDItMTY3ZC5jY252NDItMTY3ZC5leGFtcGxlLm9wZW50bGMuY29tL2F1dGgvcmVhbG1zL21hc3RlciIsInN1YiI6IjU2NDljMGQ5LTNiNWYtNGExNy1hNThhLWU5OTc5YzQ2ZTY4NiIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFkbWluLWNsaSIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6ImRkZTYzMTA5LWRhMzYtNDkwZC1hZWVmLWNhZDU1OGVjZDczNiIsImFjciI6IjEiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIn0.iaaIWT3z0K7-wLuyFnoxg_65JJCgIi20mNxaasyFOUnPKDoogXtgSu7R6htfMjdIUWAEL3-jV5BN4ZkNzQv0K7v_Qra7zEX7mYTSJSAIvDE32hOW7FB2vbZ62Lieq0SvOtw1RNpw3ns1DmDsV1XBudoJAdUdyvB79QoEflSVKArYID_DdytF2IC_uppGKr7nR8D0-GJjOEORDKPliRd8DpXI2z0x12I0zGvBsG1dxp-gtmDV5Ds1seIBoVms9ZF4oVfhhqz-Q-f9bi0FbsvjXIKOzw5zKgS8kPGPyQ8roMsK3Dz1BE97v8HmqR3hGxF1qr-qSesG5NYw2gtB9DOGiw 
 
 Reset passwords for each RH-SSO user 
 
@@ -659,11 +516,7 @@ user3 password is reset successfully...
 
 user4 password is reset successfully...
 
-user5 password is reset successfully...
-
-user6 password is reset successfully...
-
-project.project.openshift.io "dummy-29637" deleted
+project.project.openshift.io "dummy-24247" deleted
 Installing CodeReady Workspace...
 
 operatorgroup.operators.coreos.com/codeready-operator-group created
@@ -672,13 +525,13 @@ subscription.operators.coreos.com/codeready-workspaces created
 Waiting for CheCluster CRDs
 .checluster.org.eclipse.che/codeready created
 Waiting for Che to come up again after creating checluster...
-...........................configmap/custom configured
+............................configmap/custom configured
 deployment.extensions/codeready scaled
 deployment.extensions/codeready scaled
 Waiting for Che to come back up...
-.....Waiting for keycloak to come up...
-Keycloak credentials: admin / SjgU37Ia06s1
-STACK_ID: stackor64arb6pcvh6enq
+......Waiting for keycloak to come up...
+Keycloak credentials: admin / 4ZFmybCAJ1cW
+STACK_ID: stackujspzmcrlr57vnfh
 Giving all users access to the stack...
 
 imagestream.image.openshift.io/quarkus-stack created
@@ -686,10 +539,10 @@ imagestream.image.openshift.io/quarkus-stack imported
 
 Name:			quarkus-stack
 Namespace:		openshift
-Created:		5 seconds ago
+Created:		8 seconds ago
 Labels:			<none>
-Annotations:		openshift.io/image.dockerRepositoryCheck=2020-01-12T06:46:23Z
-Image Repository:	default-route-openshift-image-registry.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/openshift/quarkus-stack
+Annotations:		openshift.io/image.dockerRepositoryCheck=2020-01-21T07:55:15Z
+Image Repository:	default-route-openshift-image-registry.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/openshift/quarkus-stack
 Image Lookup:		local=false
 Unique Images:		1
 Tags:			1
@@ -702,7 +555,7 @@ Tags:			1
   Supports: java
 
   * quay.io/openshiftlabs/cloudnative-workspaces-quarkus@sha256:555437f0f334507365624498c6734665d3f6ba73ca6d2e671bfa9b049c7a8222
-      3 seconds ago
+      5 seconds ago
 
 Image Name:	quarkus-stack:1.3
 Docker Image:	quay.io/openshiftlabs/cloudnative-workspaces-quarkus@sha256:555437f0f334507365624498c6734665d3f6ba73ca6d2e671bfa9b049c7a8222
@@ -829,7 +682,8 @@ Environment:	SUMMARY=Red Hat CodeReady Workspaces - Java Stack container
 
 
 Checking if che is up...
-{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/api/workspace/workspacex06o88kbohk9u5a0","ide":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/user0/WORKSPACE0"},"attributes":{"created":"1578811587469"},"namespace":"user0","temporary":false,"id":"workspacex06o88kbohk9u5a0","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE0","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/api/workspace/workspace5tbwj8yyj4h784vr","ide":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/user1/WORKSPACE1"},"attributes":{"created":"1578811589224"},"namespace":"user1","temporary":false,"id":"workspace5tbwj8yyj4h784vr","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE1","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/api/workspace/workspacem5v412c5diagwq2i","ide":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/user2/WORKSPACE2"},"attributes":{"created":"1578811590184"},"namespace":"user2","temporary":false,"id":"workspacem5v412c5diagwq2i","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE2","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/api/workspace/workspace8i5uqbns1jbqobz1","ide":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/user3/WORKSPACE3"},"attributes":{"created":"1578811591246"},"namespace":"user3","temporary":false,"id":"workspace8i5uqbns1jbqobz1","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE3","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/api/workspace/workspacecpqa8fwzkc3tes2j","ide":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/user4/WORKSPACE4"},"attributes":{"created":"1578811592279"},"namespace":"user4","temporary":false,"id":"workspacecpqa8fwzkc3tes2j","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE4","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/api/workspace/workspaceo214f9cann7dbjkv","ide":"http://codeready-labs-infra.apps.cluster-ccn42-a570.ccn42-a570.example.opentlc.com/user5/WORKSPACE5"},"attributes":{"created":"1578811593597"},"namespace":"user5","temporary":false,"id":"workspaceo214f9cann7dbjkv","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE5","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}servicemeshcontrolplane.maistra.io/basic-install created
-servicemeshmemberroll.maistra.io/default created
+{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/api/workspace/workspaceq2brmxil6jejfwed","ide":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/user0/WORKSPACE0"},"attributes":{"created":"1579593320764"},"namespace":"user0","temporary":false,"id":"workspaceq2brmxil6jejfwed","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE0","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/api/workspace/workspacerwlc2j2ee2n1ixm7","ide":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/user1/WORKSPACE1"},"attributes":{"created":"1579593322786"},"namespace":"user1","temporary":false,"id":"workspacerwlc2j2ee2n1ixm7","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE1","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/api/workspace/workspacep895l1ui2ylp7da2","ide":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/user2/WORKSPACE2"},"attributes":{"created":"1579593323828"},"namespace":"user2","temporary":false,"id":"workspacep895l1ui2ylp7da2","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE2","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}{"links":{"self":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/api/workspace/workspacedc1oj3qcej2cqt9s","ide":"http://codeready-labs-infra.apps.cluster-ccnv42-167d.ccnv42-167d.example.opentlc.com/user3/WORKSPACE3"},"attributes":{"created":"1579593324845"},"namespace":"user3","temporary":false,"id":"workspacedc1oj3qcej2cqt9s","status":"STOPPED","config":{"defaultEnv":"default","environments":{"default":{"machines":{"dev-machine":{"attributes":{"memoryLimitBytes":"5368709120"},"servers":{"8080/tcp":{"port":"8080","attributes":{},"protocol":"http"},"9001/tcp":{"port":"9001","attributes":{},"protocol":"http"},"8000/tcp":{"port":"8000","attributes":{},"protocol":"http"},"9000/tcp":{"port":"9000","attributes":{},"protocol":"http"}},"volumes":{},"installers":["org.eclipse.che.exec","org.eclipse.che.terminal","org.eclipse.che.ws-agent","org.eclipse.che.ls.java"],"env":{"MAVEN_OPTS":"-Xmx512m","MAVEN_MIRROR_URL":"http://nexus:8081/repository/maven-all-public"}}},"recipe":{"type":"dockerimage","content":"image-registry.openshift-image-registry.svc:5000/openshift/quarkus-stack:1.3"}}},"projects":[],"name":"WORKSPACE3","attributes":{},"commands":[{"commandLine":"mvn package -f ${current.project.path}","name":"build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean package -f ${current.project.path}","name":"clean build","attributes":{"goal":"Build","previewUrl":""},"type":"mvn"},{"commandLine":"mvn verify -f ${current.project.path}","name":"test","attributes":{"goal":"Test","previewUrl":""},"type":"mvn"},{"commandLine":"mvn clean compile quarkus:dev -f ${current.project.path}","name":"Build and Run Locally","attributes":{"goal":"Run","previewUrl":"${server.8080/tcp}"},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -Pnative -DskipTests","name":"Build Native Quarkus App","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"MAVEN_OPTS\u003d\"-Xmx1024M -Xss128M -XX:MetaspaceSize\u003d512M -XX:MaxMetaspaceSize\u003d1024M -XX:+CMSClassUnloadingEnabled\" mvn -f ${current.project.path} clean package -DskipTests -Dquarkus.profile\u003dprod","name":"Package for OpenShift","attributes":{"goal":"Package","previewUrl":""},"type":"custom"},{"commandLine":"mvn spring-boot:run -f ${current.project.path}","name":"run spring-boot","attributes":{"goal":"Run","previewUrl":"${server.9000/tcp}"},"type":"mvn"}],"links":[]}}servicemeshcontrolplane.maistra.io/basic-install created
+servicemeshmemberroll.maistra.io/default unchanged
+knativeserving.serving.knative.dev/knative-serving created
 deploymentconfig.apps.openshift.io/rhamt-web-console-executor scaled
-Total of 0h:10m:9s seconds elapsed for CCNRD Dev Track Environment Deployment
+Total of 0h:9m:47s seconds elapsed for CCNRD Dev Track Environment Deployment
