@@ -67,7 +67,7 @@ metadata:
       ]
     capabilities: Seamless Upgrades
     olm.operatorNamespace: openshift-operators
-    containerImage: 'registry.redhat.io/openshift-service-mesh/istio-rhel8-operator:1.0.3'
+    containerImage: 'registry.redhat.io/openshift-service-mesh/istio-rhel8-operator:1.0.4'
     createdAt: '2019-12-05T14:21:42UTC'
     categories: 'OpenShift Optional, Integration & Delivery'
     description: >-
@@ -76,8 +76,8 @@ metadata:
       Mesh is based on the open source Istio project.
     olm.operatorGroup: global-operators
   selfLink: >-
-    /apis/operators.coreos.com/v1alpha1/namespaces/openshift-operators/clusterserviceversions/servicemeshoperator.v1.0.3
-  name: servicemeshoperator.v1.0.3
+    /apis/operators.coreos.com/v1alpha1/namespaces/openshift-operators/clusterserviceversions/servicemeshoperator.v1.0.4
+  name: servicemeshoperator.v1.0.4
   namespace: openshift-operators
   labels:
     olm.api.1d316f16185c2e24: provided
@@ -154,7 +154,7 @@ spec:
       type: MultiNamespace
     - supported: true
       type: AllNamespaces
-  version: 1.0.3
+  version: 1.0.4
   links:
     - name: Service Mesh Operator
       url: 'https://github.com/Maistra/istio-operator'
@@ -387,9 +387,9 @@ spec:
                         value: istio-operator
                       - name: ISTIO_CNI_IMAGE
                         value: >-
-                          registry.redhat.io/openshift-service-mesh/istio-cni-rhel8:1.0.3
+                          registry.redhat.io/openshift-service-mesh/istio-cni-rhel8:1.0.4
                     image: >-
-                      registry.redhat.io/openshift-service-mesh/istio-rhel8-operator:1.0.3
+                      registry.redhat.io/openshift-service-mesh/istio-rhel8-operator:1.0.4
                     imagePullPolicy: Always
                     name: istio-operator
                     ports:

@@ -104,7 +104,7 @@ fi
 # Setup Istio Service Mesh
 if [ -z "${MODULE_TYPE##*m3*}" ] || [ -z "${MODULE_TYPE##*m4*}" ] ; then
   echo -e "Installing OpenShift Service Mesh..."
-  oc apply -f ${MYDIR}/../files/clusterserviceversion-servicemeshoperator.v1.0.3.yaml
+  oc apply -f ${MYDIR}/../files/clusterserviceversion-servicemeshoperator.v1.0.4.yaml
   oc apply -f ${MYDIR}/../files/subscription-servicemeshoperator.yaml
   echo -e "Deploying Service Mesh Control Plane and Membber Roll..."
   oc new-project istio-system
@@ -151,7 +151,7 @@ if [ -z "${MODULE_TYPE##*m4*}" ] ; then
   oc apply -f ${MYDIR}/../files/knativeserving-knative-serving.yaml
 
   echo -e "Installing Knative Eventing..."
-  oc apply -f ${MYDIR}/../files/clusterserviceversion-knative-eventing-operator.v0.10.0.yaml
+  oc apply -f ${MYDIR}/../files/clusterserviceversion-knative-eventing-operator.v0.11.0.yaml
   oc apply -f ${MYDIR}/../files/subscription-knative-eventing-operator.yaml
 
 echo -e "Creating Role, Group, and assign Users"
@@ -196,7 +196,7 @@ oc apply -f ${MYDIR}/../files/clusterserviceversion-amqstreams.v1.3.0.yaml
 oc apply -f ${MYDIR}/../files/subscription-amq-streams.yaml
 
 # Install Knative Kafka operator for all namespaces
-oc apply -f ${MYDIR}/../files/clusterserviceversion-knative-kafka-operator.v0.10.0.yaml
+oc apply -f ${MYDIR}/../files/clusterserviceversion-knative-kafka-operator.v0.11.2.yaml
 oc apply -f ${MYDIR}/../files/subscription-knative-kafka-operator.yaml
 
 # Wait for Kafka CRD to be a thing
@@ -352,7 +352,8 @@ if [ -z "${MODULE_TYPE##*m1*}" ] ; then
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer $RESULT_TOKEN" \
-    -d '{ "username": "user'"$i"'", "enabled": true, "disableableCredentialTypes": [ "password" ] }')
+    # -d '{ "username": "user'"$i"'", "enabled": true, "disableableCredentialTypes": [ "password" ] }')
+    -d '{"username":"user'"$i"'","enabled":true,"emailVerified": true,"firstName": "User'${i}'","lastName": "Migrator","email": "user'${i}'@no-reply.com", "credentials":[{"type":"password","value":"'${USER_PWD}'","temporary":false}]}')
     if [ "$RES" = 200 ] || [ "$RES" = 201 ] || [ "$RES" = 409 ] ; then
       echo -e "Created RH-SSO user$i successfully...\n"
     else
@@ -360,38 +361,40 @@ if [ -z "${MODULE_TYPE##*m1*}" ] ; then
     fi
   done
 
-  echo -e "Retrieving RH-SSO user's ID list \n"
-  USER_ID_LIST=$(curl -k -X GET https://secure-rhamt-web-console-labs-infra.$HOSTNAME_SUFFIX/auth/admin/realms/rhamt/users/ \
-  -H "Accept: application/json" \
-  -H "Authorization: Bearer $RESULT_TOKEN")
-  echo -e "USER_ID_LIST: $USER_ID_LIST \n"
 
-  echo -e "Getting access token to reset passwords \n"
-  export RESULT_TOKEN=$(curl -k -X POST https://secure-rhamt-web-console-labs-infra.$HOSTNAME_SUFFIX/auth/realms/master/protocol/openid-connect/token \
-  -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "username=admin" \
-  -d 'password=password' \
-  -d 'grant_type=password' \
-  -d 'client_id=admin-cli' | jq -r '.access_token')
-  echo -e "RESULT_TOKEN: $RESULT_TOKEN \n"
 
-  echo -e "Reset passwords for each RH-SSO user \n"
-  for i in $(jq '. | keys | .[]' <<< "$USER_ID_LIST"); do
-    USER_ID=$(jq -r ".[$i].id" <<< "$USER_ID_LIST")
-    USER_NAME=$(jq -r ".[$i].username" <<< "$USER_ID_LIST")
-    if [ "$USER_NAME" != "rhamt" ] ; then
-      RES=$(curl -s -w '%{http_code}' -o /dev/null -k -X PUT https://secure-rhamt-web-console-labs-infra.$HOSTNAME_SUFFIX/auth/admin/realms/rhamt/users/$USER_ID/reset-password \
-        -H "Content-Type: application/json" \
-        -H "Accept: application/json" \
-        -H "Authorization: Bearer $RESULT_TOKEN" \
-        -d '{ "type": "password", "value": "'"$USER_PWD"'", "temporary": true}')
-      if [ "$RES" = 204 ] ; then
-        echo -e "user$i password is reset successfully...\n"
-      else
-        echo -e "Failure to reset user$i password with $RES\n"
-      fi
-    fi
-  done
+#   echo -e "Retrieving RH-SSO user's ID list \n"
+#   USER_ID_LIST=$(curl -k -X GET https://secure-rhamt-web-console-labs-infra.$HOSTNAME_SUFFIX/auth/admin/realms/rhamt/users/ \
+#   -H "Accept: application/json" \
+#   -H "Authorization: Bearer $RESULT_TOKEN")
+#   echo -e "USER_ID_LIST: $USER_ID_LIST \n"
+
+#   echo -e "Getting access token to reset passwords \n"
+#   export RESULT_TOKEN=$(curl -k -X POST https://secure-rhamt-web-console-labs-infra.$HOSTNAME_SUFFIX/auth/realms/master/protocol/openid-connect/token \
+#   -H "Content-Type: application/x-www-form-urlencoded" \
+#   -d "username=admin" \
+#   -d 'password=password' \
+#   -d 'grant_type=password' \
+#   -d 'client_id=admin-cli' | jq -r '.access_token')
+#   echo -e "RESULT_TOKEN: $RESULT_TOKEN \n"
+
+#   echo -e "Reset passwords for each RH-SSO user \n"
+#   for i in $(jq '. | keys | .[]' <<< "$USER_ID_LIST"); do
+#     USER_ID=$(jq -r ".[$i].id" <<< "$USER_ID_LIST")
+#     USER_NAME=$(jq -r ".[$i].username" <<< "$USER_ID_LIST")
+#     if [ "$USER_NAME" != "rhamt" ] ; then
+#       RES=$(curl -s -w '%{http_code}' -o /dev/null -k -X PUT https://secure-rhamt-web-console-labs-infra.$HOSTNAME_SUFFIX/auth/admin/realms/rhamt/users/$USER_ID/reset-password \
+#         -H "Content-Type: application/json" \
+#         -H "Accept: application/json" \
+#         -H "Authorization: Bearer $RESULT_TOKEN" \
+#         -d '{ "type": "password", "value": "'"$USER_PWD"'", "temporary": true}')
+#       if [ "$RES" = 204 ] ; then
+#         echo -e "user$i password is reset successfully...\n"
+#       else
+#         echo -e "Failure to reset user$i password with $RES\n"
+#       fi
+#     fi
+#   done
 fi
 
 oc delete project $TMP_PROJ

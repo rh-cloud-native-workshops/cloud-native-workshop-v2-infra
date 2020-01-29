@@ -2,6 +2,8 @@
 
 FROM registry.access.redhat.com/codeready-workspaces/stacks-java-rhel8:1.2
 
+LABEL maintainer="Daniel Oh doh@redhat.com"
+
 USER root
 
 RUN sh -c 'curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64.tar.gz | gzip -d > /usr/local/bin/odo'
