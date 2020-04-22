@@ -1,0 +1,3 @@
+== This repo is Deprecated from OpenShift 4.3
+
+https://github.com/redhat-cop/agnosticd/tree/development/ansible/roles/ocp4-workload-ccnrd[AgnosticD] is used to create a workshop environment in OCP 4.3+.
